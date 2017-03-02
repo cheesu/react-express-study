@@ -1,0 +1,43 @@
+{
+  "name": "react-express-study",
+  "version": "1.0.0",
+  "description": "study for reacy with express and use ajax haha",
+  "main": "index.js",
+  "scripts": {
+    "test": "test command text",
+    "clean": "rm -rf build public/bundle.js",
+    "build": "babel server --out-dir build && webpack",
+    "start": "set NODE_ENV=production&&node ./build/main.js",
+    "development": "set NODE_ENV=development&&node ./build/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cheesu/react-express-study.git"
+  },
+  "keywords": [
+    "study",
+    "react",
+    "express",
+    "ajax"
+  ],
+  "author": "cheesu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cheesu/react-express-study/issues"
+  },
+  "homepage": "https://github.com/cheesu/react-express-study#readme",
+  "dependencies": {
+    "express": "^4.15.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "react-hot-loader": "^1.3.1",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  }
+}
