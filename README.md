@@ -7,6 +7,9 @@ $ npm run build
 // 개발버전 서버 구동
 $ npm run development
 
+// 이렇게 실행
+$ npm run build && npm run development
+
 포트번호 3000 배포용
 포트번호 3001 개발용
 
@@ -27,4 +30,9 @@ pakage.json
 "development": "set NODE_ENV=development&&node ./build/main.js"
 
   이렇게 바꿔줍니다.
+
+  ajax 라이브러리는 axios 사용
+  익스플로러에선 미지원
+
+
 

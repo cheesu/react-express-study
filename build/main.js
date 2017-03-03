@@ -12,9 +12,9 @@ var _webpack = require('webpack');
 
 var _webpack2 = _interopRequireDefault(_webpack);
 
-var _posts = require('./routes/posts');
+var _counter = require('./routes/counter');
 
-var _posts2 = _interopRequireDefault(_posts);
+var _counter2 = _interopRequireDefault(_counter);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34,11 +34,8 @@ if (process.env.NODE_ENV == 'development') {
 }
 app.use('/', _express2.default.static(__dirname + '/../public'));
 
-app.get('/hello', function (req, res) {
-    return res.send('Can you hear me?');
-});
-
-app.use('/posts', _posts2.default);
+var data = { number: 0 };
+app.use('/counter', (0, _counter2.default)(data));
 
 var server = app.listen(port, function () {
     console.log('Express listening on port', port);
